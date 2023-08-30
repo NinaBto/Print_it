@@ -31,11 +31,11 @@ function showSlide () {
 let left = document.querySelector('.arrow_left');
 
 left.addEventListener("click", function () {
-    if (i < 3) {
-        i --;
+    if (i == 0) {
+        i = 3;
     }
     else {
-        i = 0;
+        i --;
     }
 
         console.log("je suis une fléche pointant vers la gauche");
@@ -45,8 +45,13 @@ left.addEventListener("click", function () {
         const texteElement = document.querySelector(".banner-p");
         texteElement.innerHTML = slides[i]['tagLine'];
         
+        for (o=0; o<=3; o ++) {
+            document.querySelector("#dot"+o).classList.remove("dot_selected")
+           };
+   
         const bulletsElement = document.querySelector("#dot"+i);
-        bulletsElement.classList.remove("dot_selected");
+        bulletsElement.classList.add("dot_selected");
+        
 
 });
 
@@ -66,6 +71,10 @@ right.addEventListener("click", function () {
 
         const texteElement = document.querySelector(".banner-p");
         texteElement.innerHTML = slides[i]['tagLine'];
+
+        for (o=0; o<=3; o ++) {
+         document.querySelector("#dot"+o).classList.remove("dot_selected")
+        };
 
         const bulletsElement = document.querySelector("#dot"+i);
         bulletsElement.classList.add("dot_selected");
