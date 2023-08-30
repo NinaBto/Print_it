@@ -31,26 +31,27 @@ function showSlide () {
 let left = document.querySelector('.arrow_left');
 
 left.addEventListener("click", function () {
-    if (i == 0) {
+        if (i == 0) {
         i = 3;
-    }
-    else {
+        }
+        else {
         i --;
-    }
+        }
 
-        console.log("je suis une fléche pointant vers la gauche");
-        const imageElement = document.querySelector(".banner-img");
-        imageElement.src = slides[i]['image'];
+    console.log("je suis une fléche pointant vers la gauche");
 
-        const texteElement = document.querySelector(".banner-p");
-        texteElement.innerHTML = slides[i]['tagLine'];
+    const imageElement = document.querySelector(".banner-img");
+    imageElement.src = slides[i]['image'];
+
+    const texteElement = document.querySelector(".banner-p");
+    texteElement.innerHTML = slides[i]['tagLine'];
         
-        for (o=0; o<=3; o ++) {
-            document.querySelector("#dot"+o).classList.remove("dot_selected")
-           };
+    for (o=0; o<=3; o ++) {
+        document.querySelector("#dot"+o).classList.remove("dot_selected")
+        };
    
-        const bulletsElement = document.querySelector("#dot"+i);
-        bulletsElement.classList.add("dot_selected");
+    const bulletsElement = document.querySelector("#dot"+i);
+    bulletsElement.classList.add("dot_selected");
         
 
 });
@@ -58,26 +59,27 @@ left.addEventListener("click", function () {
 //flèche droite
 let right = document.querySelector('.arrow_right');
 right.addEventListener("click", function () {
-    if (i < 3) {
+        if (i < 3) {
         i ++;
-    }
-    else {
+        }
+        else {
         i = 0;
-    }
+        }
 
-        console.log("je suis une fléche pointant vers la droite");
-        const imageElement = document.querySelector(".banner-img");
-        imageElement.src = slides[i]['image'];
+    console.log("je suis une fléche pointant vers la droite");
+        
+    const imageElement = document.querySelector(".banner-img");
+    imageElement.src = slides[i]['image'];
 
-        const texteElement = document.querySelector(".banner-p");
-        texteElement.innerHTML = slides[i]['tagLine'];
+    const texteElement = document.querySelector(".banner-p");
+    texteElement.innerHTML = slides[i]['tagLine'];
 
         for (o=0; o<=3; o ++) {
          document.querySelector("#dot"+o).classList.remove("dot_selected")
         };
 
-        const bulletsElement = document.querySelector("#dot"+i);
-        bulletsElement.classList.add("dot_selected");
+    const bulletsElement = document.querySelector("#dot"+i);
+    bulletsElement.classList.add("dot_selected");
 
     
 });
@@ -96,12 +98,14 @@ function Bullets () {
 
 let bullets = document.querySelector('.dots');
 bullets.addEventListener("click", function () {
+    
     if (i <= 3) {
         i ++;
-    }
+    }   
     else {
         i = 0;
     }
+
     console.log("je suis une bulle");
     
     
